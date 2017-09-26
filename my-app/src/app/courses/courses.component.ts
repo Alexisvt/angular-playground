@@ -23,5 +23,14 @@ export class CoursesComponent implements OnInit {
     console.log('Div was clicked');
   }
 
+  onKeyUpUgly($event) {
+    if ($event.keyCode === 13) {
+      console.log(' ENTER was pressed');
+    }
+  }
+  onKeyUpPretty() {
+    console.log(' ENTER was pressed');
+  }
+
   ngOnInit() {}
 }

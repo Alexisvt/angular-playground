@@ -9,3 +9,12 @@
   <button [style.backgroundColor]="isActive ? 'blue' : 'white'">Other button</button>
   <button (click)="onSave($event)">Click button sample (click me)</button>
 </div>
+<div>
+  <div>
+    <h3>Handling key events (Filtering)</h3>
+    <label>Ugly way</label>
+    <input type="text" (keyup)="onKeyUpUgly($event)">
+  </div>
+  <label>Better way</label>
+  <input type="text" (keyup.enter)="onKeyUpPretty()">
+</div>
