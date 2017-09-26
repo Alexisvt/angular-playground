@@ -28,3 +28,12 @@
   <p>Type something and then press enter to see the result</p>
   <input [(ngModel)]="emailText" type="text" (keyup.enter)="onKeyUpTwoWay()">
 </div>
+<div>
+  <h3>Pipe sampples</h3>
+  <p>Se the code to see the differents pipe in action</p>
+  <p>{{objPipeSample.title | uppercase | lowercase}}</p>
+  <p>{{objPipeSample.students | number}}</p>
+  <p>{{objPipeSample.rating | number:'2.2-2'}}</p>
+  <p>{{objPipeSample.price | currency:'AUD':true}}</p>
+  <p>{{objPipeSample.releaseDate | date:'shortDate'}}</p>
+</div>
