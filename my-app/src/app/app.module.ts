@@ -7,9 +7,10 @@ import { AuthorsService } from './authors.service';
 import { AuthorsComponent } from './authors/authors.component';
 import { CoursesService } from './courses.service';
 import { CoursesComponent } from './courses/courses.component';
+import { SummaryPipe } from './summary.pipe';
 
 @NgModule({
-  declarations: [AppComponent, CoursesComponent, AuthorsComponent],
+  declarations: [AppComponent, CoursesComponent, AuthorsComponent, SummaryPipe],
   imports: [BrowserModule, FormsModule],
   providers: [CoursesService, AuthorsService],
   bootstrap: [AppComponent],

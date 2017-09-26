@@ -37,3 +37,8 @@
   <p>{{objPipeSample.price | currency:'AUD':true}}</p>
   <p>{{objPipeSample.releaseDate | date:'shortDate'}}</p>
 </div>
+<div>
+  <h3>Custom Pipe sample</h3>
+  <p>Long text below but we are using a custom pipe to get a shorter version of it</p>
+  <p>{{ sampleText | summary}}</p>
+</div>
