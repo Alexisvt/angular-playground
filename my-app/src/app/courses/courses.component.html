@@ -7,4 +7,5 @@
 <div>
   <button class="btn btn-primary" [class.active]="isActive">Save</button>
   <button [style.backgroundColor]="isActive ? 'blue' : 'white'">Other button</button>
+  <button (click)="onSave($event)">Click button sample (click me)</button>
 </div>
