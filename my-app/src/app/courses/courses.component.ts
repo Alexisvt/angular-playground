@@ -9,9 +9,11 @@ import { CoursesService } from '../courses.service';
 })
 export class CoursesComponent implements OnInit {
   title = 'List of courses';
-  courses;
+  courses: string[];
+  isActive: boolean;
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
+    this.isActive = true;
   }
 
   ngOnInit() {}
