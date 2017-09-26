@@ -10,6 +10,7 @@ import { AuthorsService } from '../authors.service';
 export class AuthorsComponent implements OnInit {
   title: string;
   authorList: string[];
+  imageUrl = 'https://unsplash.it/200/300';
 
   constructor(service: AuthorsService) {
     this.authorList = service.getAuthors();
