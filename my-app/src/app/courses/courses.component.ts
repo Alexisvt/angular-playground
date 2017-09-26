@@ -15,8 +15,12 @@ export class CoursesComponent implements OnInit {
     this.courses = service.getCourses();
     this.isActive = true;
   }
-  onSave($event) {
+  onSave($event: Event) {
+    $event.stopPropagation();
     console.log('Button was clicked', $event);
+  }
+  onClickedDiv() {
+    console.log('Div was clicked');
   }
 
   ngOnInit() {}
