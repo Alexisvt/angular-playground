@@ -11,6 +11,7 @@ export class CoursesComponent implements OnInit {
   title = 'List of courses';
   courses: string[];
   isActive: boolean;
+  emailText: string;
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
     this.isActive = true;
@@ -30,6 +31,14 @@ export class CoursesComponent implements OnInit {
   }
   onKeyUpPretty() {
     console.log(' ENTER was pressed');
+  }
+
+  onKeyUp(emailElement) {
+    console.log(emailElement.value);
+  }
+
+  onKeyUpTwoWay() {
+    console.log(this.emailText);
   }
 
   ngOnInit() {}

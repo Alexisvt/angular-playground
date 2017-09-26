@@ -18,3 +18,13 @@
   <label>Better way</label>
   <input type="text" (keyup.enter)="onKeyUpPretty()">
 </div>
+<div>
+  <h3>Template variables</h3>
+  <p>Type something and then press enter to see the result</p>
+  <input #email type="text" (keyup.enter)="onKeyUp(email)">
+</div>
+<div>
+  <h3>Two way binding sample</h3>
+  <p>Type something and then press enter to see the result</p>
+  <input [(ngModel)]="emailText" type="text" (keyup.enter)="onKeyUpTwoWay()">
+</div>
