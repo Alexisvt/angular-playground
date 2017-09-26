@@ -11,6 +11,7 @@ export class AuthorsComponent implements OnInit {
   title: string;
   authorList: string[];
   imageUrl = 'https://unsplash.it/200/300';
+  colSpan = 2;
 
   constructor(service: AuthorsService) {
     this.authorList = service.getAuthors();
