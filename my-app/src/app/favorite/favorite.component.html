@@ -1,1 +1,2 @@
-<span class="glyphicon" [ngClass]="{'glyphicon-star': isFavorite == true, 'glyphicon-star-empty': isFavorite == false}" arial-hidden="true" (click)="onClicked()" ></span>
+<span class="glyphicon" [class.glyphicon-star]="isFavorite" [class.glyphicon-star-empty]="!isFavorite" arial-hidden="true"
+  (click)="onClicked()"></span>
