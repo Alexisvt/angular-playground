@@ -14,6 +14,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { SummaryPipe } from './summary.pipe';
 import { AgendaComponent } from './agenda/agenda.component';
+import { TitleCasingPipe } from './title-casing.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AgendaComponent } from './agenda/agenda.component';
     SummaryPipe,
     FavoriteComponent,
     AgendaComponent,
+    TitleCasingPipe,
   ],
   imports: [BrowserModule, FormsModule, HttpModule],
   providers: [CoursesService, AuthorsService, ContactService],
