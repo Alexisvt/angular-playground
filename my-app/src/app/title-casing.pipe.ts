@@ -6,8 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TitleCasingPipe implements PipeTransform {
   prepositions = ['of', 'the'];
   transform(value: string, args?: any): any {
-    const regx = /^(l|o)/;
-    if (value) {
+    if (!value) {
       return null;
     }
     const tempTitleList = value
@@ -15,12 +14,14 @@ export class TitleCasingPipe implements PipeTransform {
       .map((word, index) => {
         let fixedWord = null;
         if (
-          (index === 0 && this.prepositions.includes(word)) ||
-          !this.prepositions.includes(word)
+          (index === 0 && this.prepositions.includes(word.toLowerCase())) ||
+          !this.prepositions.includes(word.toLowerCase())
         ) {
-          fixedWord = `${word.charAt(0).toUpperCase()}${word.slice(1)}`;
+          fixedWord = `${word.charAt(0).toUpperCase()}${word
+            .slice(1)
+            .toLowerCase()}`;
         } else {
-          fixedWord = word;
+          fixedWord = word.toLowerCase();
         }
 
         return fixedWord;
